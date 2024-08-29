@@ -1,0 +1,55 @@
+body {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    background-image: url(../img/bg-ranking.jpg);
+    background-size: cover;
+
+    color: #333;
+    height: 100vh;
+}
+
+
+.ranking-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Faz com que o input ocupe toda a largura */
+    max-width: 500px; /* Define o maximo da largura */
+    margin: 0 auto;
+
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+#redirect-login {
+    background-color: #00b5cc;
+    border-radius: 8px;
+    cursor: pointer; /* Define o curso para o estilo de click*/
+    
+    padding: 15px;
+    width: 100%; /* Faz com que o input ocupe toda a largura */
+    max-width: 300px; /* Define o maximo da largura */
+    margin: 0 auto;
+
+    color: #fff;
+    font-size: 1em;
+}

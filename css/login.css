@@ -1,0 +1,79 @@
+.login-form {
+    /* Ajusta o posicionamento dos itens */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    /* height: 100vh;  Faz com que o elemeno ocupe 100% da View Port (janela visivel) */
+}
+
+.login_header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.login_header img {
+    width: 350px;
+}
+
+.login_header h1 {
+    color: #333;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.login_input {
+    border: 2px solid #333;
+    border-radius: 8px;
+    outline: nome; /* Remove o eveito de select do inpu */
+
+    padding: 15px;
+    width: 100%; /* Faz com que o input ocupe toda a largura */
+    max-width: 300px; /* Define o maximo da largura */
+    margin-bottom: 15px;
+
+    color: #333;
+    font-size: 1em;
+}
+
+.login_button {
+    background-color: #00b5cc;
+    border-radius: 8px;
+    cursor: pointer; /* Define o curso para o estilo de click*/
+    
+    padding: 15px;
+    width: 100%; /* Faz com que o input ocupe toda a largura */
+    max-width: 300px; /* Define o maximo da largura */
+
+    color: #fff;
+    font-size: 1em;
+}
+
+.login_button:disabled {
+    background-color: #d8d8d8;
+    color: #919191;
+    cursor: auto; /* Define o curso para o estilo padrão*/
+}
+
+.redirect-ranking {
+    /* Posicionamento do botão */
+    display: grid;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #B52E95;
+    border-radius: 8px;
+    cursor: pointer; /* Define o curso para o estilo de click*/
+    
+    padding: 15px;
+    margin: 20px auto;
+    width: 300px; /* Faz com que o input ocupe toda a largura */
+
+    color: #fff;
+    font-size: 1em;
+}

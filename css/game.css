@@ -1,0 +1,187 @@
+main {
+    /*define o posicionamento dos itens*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Define o tamanho do main*/
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 20px 50px;
+
+    /*Define o backgraund*/
+    background-image: url(../img/bg-game.jpg);
+    background-size: cover;
+}
+
+header {
+    /*define o posicionamento dos itens*/
+    display: flex;
+    justify-content: space-between; /* lava os elementos um para cada borda do componente */
+    align-items: center;
+
+    /* Define o tamanho do header*/
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+
+    /* Estilização do elemento */
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 1,2em;
+    border-radius: 5px;
+
+}
+
+.grid {
+    /* Configuração do Grid */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    /* Configuração do tamanho do elemento */
+    width: 100%;
+    max-width: 800px;
+    /* Posicionamento do elemento */
+    margin: 0 auto;
+}
+
+.card {
+    /* Define o tamanho do card */
+    width: 100%;
+    aspect-ratio: 3/4; /* Mantem a proporção do tamanho de acordo com o tela */
+    /* Estilização do Card */
+    border-radius: 5px;
+    background-color: #ccc;
+    /* Forças a "face" a respeitar o posicionamento do card */
+    position: relative; 
+    /* Define o funcionamento da tranformação/transição do elemento */
+    transition: all 600ms ease;
+    /* Transforma o stylo do elemento em 3D - Para poder ver o verso do mesmo */
+    transform-style: preserve-3d;
+}
+
+.face {
+    /* Define o tamanho da face */
+    width: 100%;
+    height: 100%;
+    /* Faz com que o front e o Back fiquem um em cima do outro */
+    position: absolute;  
+    /* Ajusta o posicionamento da imagem */
+    background-size: cover;
+    background-position: center;
+    /* estilização da face */
+    border: 2px solid #700204;
+    border-radius: 5px;
+    /* Define o funcionamento da tranformação/transição do elemento */
+    transition: all 600ms ease;
+}
+
+.front {
+    transform: rotateY(180deg); /* Retorna a carta invertida (por causa da rotação) para posição normal */
+}
+
+.back {
+    background-image: url(../img/back.png);
+        /* Oculta o verso do elemento - Para que o "fron" que esta atras seja exibido */
+    backface-visibility: hidden;
+}
+
+.reveal-card {
+    transform: rotateY(180deg); /* Rotaciona a carta no eixo Y */
+}
+
+.disable-card {
+    /* Aletera a imagem da carta quando utilizado */
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+.nav-button {
+    display: flex;
+    justify-content: space-between; /* lava os elementos um para cada borda do componente */
+    align-items: center;
+
+}
+
+#reload-button {
+    background-color: #00b5cc;
+    border-radius: 8px;
+    cursor: pointer; /* Define o curso para o estilo de click*/
+    
+    padding: 15px;
+    margin-top: 30px;
+    width: 300px; /* Faz com que o input ocupe toda a largura */
+
+    color: #fff;
+    font-size: 1em;
+}
+
+.redirect-ranking {
+    background-color: #B52E95;
+    border-radius: 8px;
+    cursor: pointer; /* Define o curso para o estilo de click*/
+    
+    padding: 15px;
+    margin-top: 30px;
+    width: 300px; /* Faz com que o input ocupe toda a largura */
+
+    color: #fff;
+    font-size: 1em;
+}
+
+
+/* styles.css */
+#endGamePopup {
+    display: none; /* Oculta o pop-up inicialmente */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+h2 {
+    padding: 15px;
+}
+
+
+#restartGame {
+    background-color: #00b5cc;
+    border-radius: 8px;
+    cursor: pointer; /* Define o curso para o estilo de click*/
+    
+    padding: 15px;
+    margin-top: 30px;
+    width: 300px; /* Faz com que o input ocupe toda a largura */
+
+    color: #fff;
+    font-size: 1em;
+}
+
+#endGameMessage {
+    line-height: 1.5;
+}
+

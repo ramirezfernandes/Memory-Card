@@ -1,0 +1,13 @@
+/* Import da font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    /* Reset das configurações padrões das tags  */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+
+    /* padronização da font */
+    font-family: 'Press Start 2P', cursive;
+}
